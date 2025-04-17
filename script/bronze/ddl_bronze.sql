@@ -9,7 +9,7 @@ Script Purpose:
 ===============================================================================
 */
 
-IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
+if exists (select 1 from sys.tables where name='crm_cust_info' and SCHEMA_NAME(schema_id)='bronze')
     DROP TABLE bronze.crm_cust_info;
 GO
 
@@ -24,7 +24,7 @@ CREATE TABLE bronze.crm_cust_info (
 );
 GO
 
-IF OBJECT_ID('bronze.crm_prd_info', 'U') IS NOT NULL
+if exists (select 1 from sys.tables where name='crm_prd_info' and SCHEMA_NAME(schema_id)='bronze')
     DROP TABLE bronze.crm_prd_info;
 GO
 
@@ -39,7 +39,7 @@ CREATE TABLE bronze.crm_prd_info (
 );
 GO
 
-IF OBJECT_ID('bronze.crm_sales_details', 'U') IS NOT NULL
+if exists (select 1 from sys.tables where name='crm_sales_details' and SCHEMA_NAME(schema_id)='bronze')
     DROP TABLE bronze.crm_sales_details;
 GO
 
@@ -56,7 +56,7 @@ CREATE TABLE bronze.crm_sales_details (
 );
 GO
 
-IF OBJECT_ID('bronze.erp_loc_a101', 'U') IS NOT NULL
+if exists (select 1 from sys.tables where name='erp_loc_a101' and SCHEMA_NAME(schema_id)='bronze')
     DROP TABLE bronze.erp_loc_a101;
 GO
 
@@ -66,7 +66,7 @@ CREATE TABLE bronze.erp_loc_a101 (
 );
 GO
 
-IF OBJECT_ID('bronze.erp_cust_az12', 'U') IS NOT NULL
+if exists (select 1 from sys.tables where name='erp_cust_az12' and SCHEMA_NAME(schema_id)='bronze')
     DROP TABLE bronze.erp_cust_az12;
 GO
 
@@ -77,7 +77,7 @@ CREATE TABLE bronze.erp_cust_az12 (
 );
 GO
 
-IF OBJECT_ID('bronze.erp_px_cat_g1v2', 'U') IS NOT NULL
+if exists (select 1 from sys.tables where name='erp_px_cat_g1v2' and SCHEMA_NAME(schema_id)='bronze')
     DROP TABLE bronze.erp_px_cat_g1v2;
 GO
 
